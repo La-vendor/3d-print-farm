@@ -19,8 +19,18 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @Column(name = "user_id")
     private Integer userId;
+
+    @Column(name = "order_date")
     private LocalDate orderDate;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "order_status")
     private OrderStatus orderStatus;
+
+    @Column(name = "total_amount")
     private double totalAmount;
+
 }

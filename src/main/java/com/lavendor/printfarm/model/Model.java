@@ -21,9 +21,18 @@ public class Model {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "model_name")
     private String modelName;
+
+    @Column(name = "description")
     private String description;
+
+    @Column(name = "file_url")
     private String fileUrl;
+
+    @Column(name = "author")
     private String author;
+
+    @Column(name = "upload_date")
     private LocalDateTime uploadDate;
 }

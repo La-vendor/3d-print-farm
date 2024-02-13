@@ -18,11 +18,22 @@ public class Material {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "manufacturer")
     private String manufacturer;
-    private String color;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "color")
+    private MaterialColor color;
+
+    @Column(name = "type")
     private String type;
 
+    @Column(name = "quantity_available")
     private int quantityAvailable;
+
+    @Column(name = "quantity_used")
     private int quantityUsed;
 }

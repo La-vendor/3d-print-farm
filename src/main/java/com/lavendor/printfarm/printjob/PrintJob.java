@@ -32,10 +32,16 @@ public class PrintJob {
 
     @ManyToOne
     @JoinColumn(name = "order_id")
-    private Order order;  // Direct reference to the orderId instead of Order entity
+    private Order order;
 
+    @Column(name = "print_job_status")
+    @Enumerated(EnumType.STRING)
     private PrintJobStatus printJobStatus;
+
+    @Column(name = "start_date")
     private LocalDateTime startDate;
+
+    @Column(name = "end_date")
     private LocalDateTime endDate;
 
 }

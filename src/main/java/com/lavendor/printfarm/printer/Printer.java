@@ -18,7 +18,13 @@ public class Printer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "name")
     private String name;
-    private String status;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status")
+    private PrinterStatus status;
+
+    @Column(name = "configuration")
     private String configuration;
 }
